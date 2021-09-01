@@ -7,9 +7,8 @@ const BookList = (props) => {
 
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedBook, setSelectedBook] = useState(null)
-    
 
-    
+
         return (
             <Container>
                 <Row>
@@ -34,7 +33,7 @@ const BookList = (props) => {
                                         <SingleBook
                                             book={b}
                                             selectedBook={selectedBook}
-                                            changeSelectedBook={asin => setSelectedBook({ asin })} />
+                                            changeSelectedBook={asin => setSelectedBook(asin)} />
                                     </Col>
                                 ))
                             }
@@ -46,7 +45,6 @@ const BookList = (props) => {
                 </Row>
             </Container>
         )
-    
 
 }
 
